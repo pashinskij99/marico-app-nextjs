@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixin';
 
 .wrapper {
     min-height: 100vh;
@@ -28,15 +29,29 @@
 
     .form {
         margin-top: 7.5rem;
+        @include respond(phone) {
+            width: 100%;
+        }
         .inputWrapper {
             display: flex;
             align-items: center;
             justify-content: center;
+            @include respond(tab-port) {
+                flex-direction: column;
+            }
+           
             .label {
                 position: relative;
                 margin-left: 14.4rem;
+                @include respond(phone) {
+                    width: 100%;
+                }
                 &:first-child {
                     margin-left: 0;
+                }
+                @include respond(tab-port) {
+                    margin-left: 0;
+                    margin-top: 4rem;
                 }
                 .labelName {
                     position: absolute;
@@ -46,6 +61,9 @@
                     color: $colorWhite;
                     left: 0;
                     transition: transform 0.4s ease-in-out;
+                    @include respond(phone) {
+                        font-size: 3.3rem;
+                    }
                 }
                 .labelInput {
                     background-color: transparent;
@@ -62,6 +80,11 @@
                     &:focus {
                         outline: none;
                     }
+
+                    @include respond(phone) {
+                        width: 100%;
+                        padding: 2.5rem 0;
+                    }
                 }
                 .labelInput:focus ~ .labelName {
                     transform: translateY(-100%);
@@ -74,6 +97,7 @@
                     right: 1rem;
                     top: 0;
                     transform: scale(0.75);
+                    
                 }
             }
         }
@@ -89,6 +113,11 @@
             padding: 2.3rem 0;
             background-color: $colorBlue1;
             border-radius: 1.2rem;
+            @include respond(phone) {
+                width: 100%;
+                font-size: 3.6rem;
+                padding: 3.3rem 0;
+            }
         }
 
         .titleOr {
@@ -111,6 +140,9 @@
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 7.6rem;
             margin-top: 4rem;
+            @include respond(tab-port) {
+                grid-column-gap: 1.6rem;
+            }
             .socialVariantsItem {
                 .socialVariantsBtn {
                     border: 2px solid $colorWhite;
@@ -123,6 +155,9 @@
                     height: 100%;
                     .socialVariantsIcon {
                         transform: scale(0.75);
+                        @include respond(tab-port) {
+                            transform: scale(1);
+                        }
                     }
                     .nameBtn {
                         font-weight: 400;
@@ -130,6 +165,9 @@
                         line-height: 3.2rem;
                         color: $colorWhite;
                         margin-left: 2rem;
+                        @include respond(tab-port) {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -143,5 +181,9 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
         color: $colorWhite;
+
+        @include respond(phone) {
+            font-size: 2.6rem;
+        }
     }
 }

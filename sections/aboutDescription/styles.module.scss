@@ -4,6 +4,9 @@
 .wrapper {
     .container {
         text-align: center;
+        @include respond(small-phone) {
+            text-align: start;
+        }
     }
 
     .logo {
@@ -11,9 +14,18 @@
         align-items: flex-start;
         width: fit-content;
         margin: 12.2rem auto 0;
+        @include respond(tab-port) {
+            align-items: center;
+        }
+        @include respond(small-phone) {
+            margin: 7.2rem 0 0;
+        }
         .logoIcon {
             // width: 9.05rem;
             // height: 8.1rem;
+            @include respond(small-phone) {
+                transform: scale(0.7);
+            }
         }
         span {
             font-weight: 800;
@@ -29,6 +41,9 @@
         padding: 0 10rem;
         margin: 0 auto;
         margin-top: 4.8rem;
+        @include respond(phone) {
+            padding: 0 1rem;
+        }
         .subTitle {
             font-weight: 600;
             font-size: 2.5rem;
@@ -47,6 +62,9 @@
             line-height: 4.5rem;
             text-align: center;
             color: $colorWhite;
+            @include respond(small-phone) {
+                text-align: start;
+            }
         }
     }
 
@@ -61,6 +79,9 @@
             color: $colorWhite;
             &:last-child {
                 font-weight: 600;
+            }
+            @include respond(phone) {
+                padding: 0 1rem;
             }
         }
     }

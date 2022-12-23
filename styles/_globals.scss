@@ -56,6 +56,10 @@ button {
     width: 100%;
     perspective: 1px;
     // height: 100vh;
+    @include respond(phone) {
+        position: relative;
+    // height: 100vh;
+    }
 }
 
 .container {
@@ -77,6 +81,9 @@ button {
     max-width: 125.2rem;
     padding: 1rem;
     margin: 0 auto;
+    @include respond(phone) {
+        max-width: none;
+    }
 }
 
 html.has-scroll-smooth {
