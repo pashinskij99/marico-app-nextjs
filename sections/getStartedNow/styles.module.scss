@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.wrapper {
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond(tab-port) {
+        min-height: 60vh;
+        padding-bottom: 10rem;
+    }
+    @include respond(small-phone) {
+        min-height: 60vh;
+    }
+    .logo {
+        @include respond(tab-port) {
+            transform: scale(0.7);
+        }
+        @include respond(small-phone) {
+            transform: scale(0.5);
+        }
+    }
+    .title {
+        font-weight: 700;
+        font-size: 10rem;
+        line-height: 15rem;
+        color: $colorWhite;
+        margin-top: 1rem;
+        @include respond(small-phone) {
+            font-size: 7rem;
+            line-height: normal;
+        }
+    }
+    .subTitle {
+        font-weight: 400;
+        font-size: 4.3rem;
+        line-height: 6.4rem;
+        color: $colorWhite;
+        @include respond(tab-port) {
+            line-height: 4.4rem;
+        }
+        @include respond(small-phone) {
+            font-size: 3.5rem;
+            line-height: normal;
+        }
+    }
+
+    .getStartedBtn {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: $colorWhite;
+
+        padding: 2.8rem 11.3rem;
+
+        background-color: $colorBlue1;
+        border-radius: 1rem;
+        margin-top: 1.4rem;
+
+        @include respond(tab-port) {
+            margin-top: 5.4rem;
+        }
+        @include respond(small-phone) {
+            width: 100%;
+        }
+    }
+
+    .usersStarted {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-top: 2.6rem;
+        .usersStartedIcon {
+            display: inline-block;
+            position: relative;
+            background-color: rgba(#0fc65c, 0.24);
+            width: 2.86rem;
+            height: 2.86rem;
+            mix-blend-mode: normal;
+            border-radius: 50%;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 1.71rem;
+                height: 1.71rem;
+                background-color: #00ff6a;
+                border-radius: 50%;
+            }
+        }
+        .amountUsers {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: $colorWhite;
+            margin-left: 0.9rem;
+        }
+        .description {
+            font-weight: 400;
+            font-size: 2.5rem;
+            color: $colorGrey;
+            margin-left: 0.9rem;
+        }
+    }
+}

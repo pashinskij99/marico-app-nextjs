@@ -1,0 +1,101 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.wrapper {
+    // min-height: 100vh;
+    text-align: center;
+    padding-top: 18.8rem;
+    @include respond(tab-land) {
+        padding-top: 2.8rem;
+    }
+    @include respond(tab-port) {
+        padding-top: 0.8rem;
+    }
+    @include respond(phone) {
+        text-align: start;
+    }
+    .container {
+        position: static;
+    }
+    .titleSectionWrapper {
+        .titleSection {
+            font-weight: 600;
+            font-size: 7.5rem;
+            line-height: 112px;
+            color: $colorWhite;
+            @include respond(small-phone) {
+                font-size: 6.1rem;
+                line-height: 7rem;
+            }
+        }
+        .listOfBenefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 6.4rem;
+            @include respond(tab-port) {
+                margin-top: 1.4rem;
+            }
+            @include respond(phone) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 5rem;
+            }
+            @include respond(small-phone) {
+                margin-top: 6rem;
+            }
+            .benefitItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include respond(tab-land) {
+                    justify-content: flex-start;
+                }
+                @include respond(phone) {
+                    align-items: flex-start;
+                }
+                .benefitItemTitleWrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .benefitItemTitleIcon {
+                        height: 3.7rem;
+                        width: 3.7rem;
+                        @include respond(phone) {
+                            height: 6.7rem;
+                            width: 6.7rem;
+                        }
+                    }
+                    .benefitItemTitle {
+                        font-weight: 600;
+                        font-size: 3.5rem;
+                        color: $colorWhite;
+                        margin-left: 0.8rem;
+                        @include respond(phone) {
+                            font-size: 5.5rem;
+                        }
+                        @include respond(small-phone) {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+                .benefitItemDescription {
+                    font-weight: 400;
+                    font-size: 2.2rem;
+                    color: $colorGrey;
+                    margin-top: 1rem;
+                    @include respond(tab-port) {
+                        line-height: 3.5rem;
+                    }
+                    @include respond(phone) {
+                        font-size: 4.5rem;
+                        line-height: 6rem;
+                    }
+                    @include respond(small-phone) {
+                        font-size: 3.2rem;
+                        line-height: 4.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

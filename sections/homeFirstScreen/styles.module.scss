@@ -1,0 +1,140 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.wrapper {
+    height: $firstScreen;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        @include respond(small-phone) {
+            text-align: start;
+            padding-left: 1.5rem;
+        }
+
+        .titleWrapper {
+            .title {
+                .titleInner {
+                    background: $gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    @include respond(small-phone) {
+                        &:first-child {
+                            margin-left: 1.5rem;
+                        }
+                    }
+                }
+                span {
+                    display: inline-block;
+                    font-weight: 700;
+                    font-size: calc(11.2rem + 1vw);
+                    line-height: 13rem;
+                    @include respond(tab-land) {
+                        font-size: calc(9.2rem + 1vw);
+                        line-height: 11rem;
+                    }
+                    @include respond(tab-port) {
+                        font-size: calc(7.2rem + 1vw);
+                        line-height: 9.5rem;
+                    }
+                    @include respond(phone) {
+                        font-size: calc(7.2rem + 1vw);
+                        line-height: 9.5rem;
+                    }
+                    @include respond(small-phone) {
+                        font-size: calc(5.2rem + 1vw);
+                        line-height: 7.5rem;
+                    }
+                }
+                .titleSpanFirst {
+                    -webkit-text-fill-color: $colorWhite;
+                }
+                .titleSpanSeconds {
+                }
+            }
+        }
+
+        .subTitle {
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 6rem;
+            max-width: 69.4rem;
+            margin: 13rem auto 0;
+            @include respond(tab-land) {
+                margin: 5rem auto 0;
+            }
+            @include respond(small-phone) {
+                font-size: 3rem;
+                line-height: 5rem;
+            }
+        }
+
+        .getStartedButtons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+            @include respond(small-phone) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                button {
+                    width: 100%;
+                    margin-top: 2rem;
+                }
+            }
+            .getStartedBtn {
+            }
+            .demoBtn {
+                margin-left: 2.6rem;
+                @include respond(small-phone) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .usersStarted {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 2.1rem;
+            @include respond(small-phone) {
+                margin-top: 4.1rem;
+            }
+            .usersStartedIcon {
+                display: inline-block;
+                position: relative;
+                background-color: rgba(#0fc65c, 0.24);
+                width: 2.86rem;
+                height: 2.86rem;
+                mix-blend-mode: normal;
+                border-radius: 50%;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 1.71rem;
+                    height: 1.71rem;
+                    background-color: #00ff6a;
+                    border-radius: 50%;
+                }
+            }
+            .amountUsers {
+                font-weight: 700;
+                font-size: 2.5rem;
+                color: $colorWhite;
+                margin-left: 0.9rem;
+            }
+            .description {
+                font-weight: 400;
+                font-size: 2.5rem;
+                color: $colorGrey;
+                margin-left: 0.9rem;
+            }
+        }
+    }
+}

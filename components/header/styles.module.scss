@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+
+.header {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    .logoName {
+      font-weight: 800;
+      font-size: 3.7rem;
+      margin-left: 1.6rem;
+      color: $colorWhite;
+    }
+  }
+
+  .headerNav {
+    .headerNavList {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 3rem;
+      .headerNavListLink {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $colorGrey;
+        transition: color 0.4s ease-in-out;
+        &:hover {
+          color: $colorBlue2;
+        }
+      }
+    }
+  }
+
+  .isNotLoginWrapper {
+    display: flex;
+    align-items: center;
+    .isNotLoginWrapperLogin {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2rem;
+      color: $colorGrey;
+    }
+    .isNotLoginWrapperSignUp {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 3rem;
+      padding: 1.3rem 2.1rem;
+      background-color: $colorBlue4;
+      color: $colorWhite;
+      border-radius: 1rem;
+      margin-left: 2.4rem;
+    }
+  }
+
+}

@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.wrapper {
+    text-align: center;
+    margin-top: 18.8rem;
+    .title {
+        font-weight: 600;
+        font-size: 7.5rem;
+        line-height: 11.2rem;
+        color: $colorWhite;
+    }
+    .carousel {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-top: 5.2rem;
+
+        .img {
+            animation-name: carouselAnimate;
+            animation-duration: 17s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            mix-blend-mode: normal;
+            opacity: 0.45;
+            @include respond(small-phone) {
+                height: 45rem;
+            }
+        }
+    }
+}
+
+@keyframes carouselAnimate {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

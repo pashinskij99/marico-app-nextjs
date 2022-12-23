@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.btn {
+  font-weight: 500;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+.buttonGetStarted {
+  color: $colorWhite;
+  padding: 2.4rem 7.4rem;
+  background-color: $colorBlue1;
+}
+
+.buttonDemo {
+  color: $colorGrey;
+  padding: 2.4rem 7.4rem;
+  border: .1rem solid $colorGrey;
+}

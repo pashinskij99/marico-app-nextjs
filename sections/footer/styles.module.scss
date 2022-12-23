@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.wrapper {
+    height: $headerHeight;
+    // margin-bottom: calc($headerHeight + 3rem) ;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .logoInner {
+            display: flex;
+            align-items: center;
+            .logoName {
+                font-weight: 800;
+                font-size: 3.7rem;
+                margin-left: 1.6rem;
+                color: $colorWhite;
+            }
+        }
+        .address {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.7rem;
+            line-height: 4rem;
+            color: $colorGrey;
+        }
+    }
+
+    .headerNav {
+        .headerNavList {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 3rem;
+            .headerNavListLink {
+                font-weight: 500;
+                font-size: 2rem;
+                color: $colorGrey;
+                transition: color 0.4s ease-in-out;
+                &:hover {
+                    color: $colorBlue2;
+                }
+            }
+        }
+    }
+}
