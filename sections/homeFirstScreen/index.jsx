@@ -2,6 +2,7 @@ import React from 'react'
 import { ButtonDemo, ButtonGetStarted } from '../../components/buttons'
 import { homeSubTitle, homeTitleH1First, homeTitleH1Second } from '../../constants'
 import styles from './styles.module.scss'
+import { motion } from 'framer-motion'
 
 const HomeFirstScreen = () => {
     return (
@@ -11,7 +12,11 @@ const HomeFirstScreen = () => {
         >
             <div className={styles.content}>
                 <div className={styles.titleWrapper}>
-                    <h1 className={styles.title}>
+                    <motion.h1
+                        initial={{ opacity: 0, translateY: '-30%' }}
+                        whileInView={{ opacity: 1, translateY: '0%' }}
+                        className={styles.title}
+                    >
                         <span
                             className={styles.titleInner}
                             data-scroll
@@ -44,7 +49,7 @@ const HomeFirstScreen = () => {
                                 </span>
                             ))}
                         </span>
-                    </h1>
+                    </motion.h1>
                     <p className={styles.subTitle}>{homeSubTitle}</p>
                     <div className={styles.getStartedButtons}>
                         <ButtonGetStarted className={styles.getStartedBtn} />

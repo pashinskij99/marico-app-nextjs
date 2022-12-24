@@ -11,6 +11,7 @@ import {
     btnsHomeText,
     homeWhyLoveStep1ImageLink,
 } from '../../../constants'
+import {motion} from 'framer-motion'
 import clsx from 'clsx'
 
 const Step1 = () => {
@@ -27,7 +28,11 @@ const Step1 = () => {
                     <button className={styles.titleBtn}>{homeWhyLoveStep1ButtonText}</button>
                 </div>
 
-                <div className={styles.content}>
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className={styles.content}
+                >
                     <div className={styles.description}>
                         <span className={styles.subTitle}>{homeWhyLoveStep1SubTitleH3}</span>
                         <h2 className={styles.h2}>
@@ -70,7 +75,7 @@ const Step1 = () => {
                             alt=''
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
